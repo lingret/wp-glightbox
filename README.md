@@ -1,2 +1,2 @@
-# wp-glightbox
-Glightbox for wordpress image gallery
+# WP Glightbox
+Glightbox For Wordpress Image Gallery
