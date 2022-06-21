@@ -24,11 +24,11 @@ add_action('wp', function () {
 });
 
 function glightbox_enqueue_styles () {
-    wp_enqueue_style('glightbox-styles', plugin_dir_url( __FILE__ ) .'assets/css/glightbox.css' );
+    wp_enqueue_style('glightbox', plugin_dir_url( __FILE__ ) .'assets/css/glightbox.css' );
 }
 
 function glightbox_enqueue_scripts () {
-    wp_enqueue_script('glightbox-core', plugin_dir_url( __FILE__ ) .'assets/js/glightbox.js', '', '', true );
+    wp_enqueue_script('glightbox', plugin_dir_url( __FILE__ ) .'assets/js/glightbox.js', '', '', true );
 }
 
 function glightbox_init_js () {
