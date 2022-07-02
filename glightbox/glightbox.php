@@ -17,7 +17,7 @@ add_action('wp', function () {
     global $post;
     $content = $post->post_content;
     if (strpos($content, 'wp-block-gallery') !== false &&
-        preg_match('/"wp-block-image size-(medium|large|full)"><a href="/s', $content)) {
+        strpos($content, 'has-nested-images') !== false) {
         add_action('wp_head', 'glightbox_enqueue_styles', 1);
         add_action('wp_footer', 'glightbox_enqueue_scripts', 1);
         add_action('wp_footer', 'glightbox_init_js', 20);
