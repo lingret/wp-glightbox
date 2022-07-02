@@ -15,9 +15,7 @@ if (! defined('ABSPATH')) exit;
 
 add_action('wp', function () {
     global $post;
-    $content = $post->post_content;
-    if (strpos($content, 'wp-block-gallery') !== false &&
-        strpos($content, 'has-nested-images') !== false) {
+    if (strpos($post->post_content, 'has-nested-images')) {
         add_action('wp_head', 'glightbox_enqueue_styles', 1);
         add_action('wp_footer', 'glightbox_enqueue_scripts', 1);
         add_action('wp_footer', 'glightbox_init_js', 20);
